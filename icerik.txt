@@ -1,0 +1,35 @@
+1-Entity Layer (SQL İçerik)
+
+Tablo
+ID
+İsim
+
+2-Data Access Layer (SQL erişim )
+
+Veri Erişim
+Crud işlemleri yapılan katman
+
+Create Read Update Delete Filter  
+
+3-Business Layer (İş fonksiyon ve sınıflarının bulundu bölüm)
+
+Ürün adı max 20 karakter olsun
+Mail Kontrol
+Mernis Kontrol
+
+4-Presentation UI (Sunum - Kullanıcı arayüzü)
+
+Kullanıcıya gösterilcek resimler
+
+
+
+
+
+
+
+
+
+
+
+
+
