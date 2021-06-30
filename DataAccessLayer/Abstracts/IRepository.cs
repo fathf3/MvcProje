@@ -13,6 +13,9 @@ namespace DataAccessLayer.Abstracts
         // CRUD -> Create - Read  - Update - Delete
         // Metodlar Tanımlanır
 
+        // Get metodu tanımlandı 
+        T Get(Expression<Func<T, bool>> filter);
+
         List<T> List(); // List() -> Listele() 
         void Insert(T p);
         void Update(T p);

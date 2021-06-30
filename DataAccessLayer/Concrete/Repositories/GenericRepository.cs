@@ -28,6 +28,12 @@ namespace DataAccessLayer.Concrete.Repositories
             _object.Remove(p);
             context.SaveChanges();
         }
+        // Dosya aramak için kullanılır
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            // ID = 5 olan tek deger doner
+            return _object.SingleOrDefault(filter);
+        }
 
         public void Insert(T p)
         {
