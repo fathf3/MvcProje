@@ -1,3 +1,3 @@
 # MvcProje
 
-![alt text](https://www.hizliresim.com/1edflwtg)
+![](https://i.hizliresim.com/1edflwt.png)
