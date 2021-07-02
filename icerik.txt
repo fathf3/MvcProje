@@ -22,10 +22,11 @@ Mernis Kontrol
 Kullanıcıya gösterilcek resimler
 
 
-
-
-
-
+1) Toplam kategori sayısı
+2) Başlık tablosunda "yazılım" kategorisine ait başlık sayısı
+3) Yazar adında 'a' harfi geçen yazar sayısı
+4) En fazla başlığa sahip kategori adı
+5) Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark
 
 
 

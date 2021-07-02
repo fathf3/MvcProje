@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracts
 {
-    public interface IWriterService : IService<Writer>
+    public interface IAboutService : IService<About>
     {
-     
     }
 }

@@ -19,12 +19,12 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void addCategory(Category category)
+        public void add(Category category)
         {
             _categoryDal.Insert(category);
         }
 
-        public void DeleteCategory(Category category)
+        public void Delete(Category category)
         {
             _categoryDal.Delete(category);
         }
@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
             return _categoryDal.List();
         }
 
-        public void UpdateCategory(Category category)
+        public void Update(Category category)
         {
             _categoryDal.Update(category);
         }

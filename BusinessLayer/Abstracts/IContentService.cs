@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracts
 {
-    public interface IWriterService : IService<Writer>
+    public interface IContentService : IService<Content>
     {
-     
+        List<Content> getListByHeadingId(int id);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracts
 {
-    public interface Service<T>
+    public interface IService<T>
     {
         List<T> getList();
         void add(T p);

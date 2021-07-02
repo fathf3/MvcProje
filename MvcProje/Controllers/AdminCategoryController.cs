@@ -31,7 +31,7 @@ namespace MvcProje.Controllers
             ValidationResult results = categoryValidator.Validate(category);
             if (results.IsValid) 
             {
-                categoryManager.addCategory(category);
+                categoryManager.add(category);
                 return RedirectToAction("Index");
             }
             else 
@@ -47,7 +47,7 @@ namespace MvcProje.Controllers
         public ActionResult DeleteCategory(int id)
         {
             var categoryValue = categoryManager.getByID(id);
-            categoryManager.DeleteCategory(categoryValue);
+            categoryManager.Delete(categoryValue);
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -61,7 +61,7 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult UpdateCategory(Category category)
         {
-            categoryManager.UpdateCategory(category);
+            categoryManager.Update(category);
             return RedirectToAction("Index");
         }
 

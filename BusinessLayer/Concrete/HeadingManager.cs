@@ -18,16 +18,14 @@ namespace BusinessLayer.Concrete
             _headingDal = headingDal;
         }
 
-        public HeadingManager(EfHeadingDal eFHeadingDal)
-        {
-        }
+        
 
-        public void addHeading(Heading heading)
+        public void add(Heading heading)
         {
             _headingDal.Insert(heading);
         }
 
-        public void DeleteHeading(Heading heading)
+        public void Delete(Heading heading)
         {
             _headingDal.Delete(heading);
         }
@@ -42,7 +40,7 @@ namespace BusinessLayer.Concrete
             return _headingDal.List();
         }
 
-        public void UpdateHeading(Heading heading)
+        public void Update(Heading heading)
         {
             _headingDal.Update(heading);
         }

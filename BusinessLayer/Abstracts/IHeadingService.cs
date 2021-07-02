@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracts
 {
-    public interface IHeadingService
+    public interface IHeadingService : IService<Heading>
     {
-        List<Heading> getList();
-        void addHeading(Heading heading);
-        Heading getByID(int id);
-        void DeleteHeading(Heading heading);
-        void UpdateHeading(Heading heading);
+        
     }
 }

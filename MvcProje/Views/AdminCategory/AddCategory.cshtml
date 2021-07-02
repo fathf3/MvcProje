@@ -13,7 +13,7 @@
 
 @using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
 {
-    <div class="form-group">
+    <div class="form-group border-success" >
         @Html.Label("Kategori Adı")
         @Html.TextBoxFor(x => x.CategoryName, new {@class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryName)

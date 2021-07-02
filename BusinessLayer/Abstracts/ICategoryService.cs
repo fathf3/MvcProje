@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracts
 {
-    public interface ICategoryService
+    public interface ICategoryService : IService<Category>
     {
 
-        List<Category> getList();
-        void addCategory(Category category);
-        Category getByID(int id); // silmek ve guncellemek icin id getirecek
-        void DeleteCategory(Category category);
-        void UpdateCategory(Category category);
+        
 
 
     }

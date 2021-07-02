@@ -45,7 +45,7 @@ namespace MvcProje.Controllers
             ValidationResult validationResult = categoryValidator.Validate(category);
             if (validationResult.IsValid)
             {
-                categoryManager.addCategory(category);
+                categoryManager.add(category);
                 return RedirectToAction("getCategoryList");
             }
             else
