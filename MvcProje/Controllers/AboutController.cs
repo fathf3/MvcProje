@@ -16,7 +16,8 @@ namespace MvcProje.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var aboutValues = aboutManager.getList();
+            return View(aboutValues);
         }
 
         [HttpGet]
@@ -31,6 +32,12 @@ namespace MvcProje.Controllers
             aboutManager.add(about);
             return RedirectToAction("Index");
         }
+
+        public PartialViewResult AboutPartial()
+        {
+            return PartialView();   
+        }
+
 
     }
 }
