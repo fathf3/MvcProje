@@ -60,6 +60,7 @@
     <Compile Include="Abstracts\IHeadingService.cs" />
     <Compile Include="Abstracts\IWriterService.cs" />
     <Compile Include="Abstracts\IService.cs" />
+    <Compile Include="Concrete\AboutManager.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\ContentManager.cs" />
     <Compile Include="Concrete\HeadingManager.cs" />

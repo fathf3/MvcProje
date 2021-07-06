@@ -1,4 +1,5 @@
 ﻿@using EntityLayer.Concrete
+
 @model List<Content>
 @{
     ViewBag.Title = "ContentByHeading";
@@ -11,7 +12,15 @@
     <div class="wrapper">
         <section class="content">
             <div class="container-fluid">
-
+                <div class="d-flex justify-content-center">
+                    
+                    @foreach (var item in Model)
+                    {
+                        <h3>@item.Heading.HeadingName</h3>
+                        break;
+                    }
+                </div>
+                <br />
                 <!-- Timelime example  -->
                 <div class="row">
                     <div class="col-md-12">

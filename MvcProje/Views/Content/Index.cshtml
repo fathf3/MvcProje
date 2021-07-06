@@ -4,35 +4,41 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@{ int i = 0; }
+
 <br />  
 <h2>Yazılar</h2>
 
 
 <br />
 
-<table class="table table-bordered">
-    <tr>
-        <th>Numara</th>
-        <th>İçerik Yazısı</th>
-        <th>Tarih</th>
-        <th>Yazar</th>
-        <th>Başlık</th>
-       
+<table class="table table table-striped projects  table-bordered">
+    <tr >
+
+        <th class="bg-gradient-blue">ID</th>
+        <th class="bg-gradient-blue">Başlık</th>
+        <th class="bg-gradient-blue">İçerik Yazısı</th>
+        <th class="bg-gradient-blue">Yazar</th>
+        <th class="bg-gradient-blue">Tarih</th>
+
+
+
 
     </tr>
 
     @foreach (var item in Model)
     {
-        i = i + 1;
-        <tr>
-            <td>@i</td>
-            <td>@item.ContentValue</td>
-            <td>@(((DateTime)item.ContentDate).ToString("dd-MM-yyyy"))</td>
-            <td>@item.Writer.WriterName @item.Writer.WriterLastName</td>
-            <td>@item.Heading.HeadingName</td>
-            
-        </tr>
+        
+<tr>
+
+    <td>@item.ContentID</td>
+    <td>@item.Heading.HeadingName</td>
+    <td>@item.ContentValue</td>
+    <td>@item.Writer.WriterName @item.Writer.WriterLastName</td>
+    <td>@(((DateTime)item.ContentDate).ToString("dd-MM-yyyy"))</td>
+
+
+
+</tr>
     }
 </table>
 

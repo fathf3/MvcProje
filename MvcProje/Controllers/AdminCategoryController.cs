@@ -51,7 +51,7 @@ namespace MvcProje.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateCategory(int id)
+        public ActionResult EditCategory(int id)
         {
             // getById ile gelen id ye sahip nesne degerleri alınır
             // Sayfada gelen nesne bilgileri gostermek icin view e gonderilir
@@ -59,7 +59,7 @@ namespace MvcProje.Controllers
             return View(categoryValue);
         }
         [HttpPost]
-        public ActionResult UpdateCategory(Category category)
+        public ActionResult EditCategory(Category category)
         {
             categoryManager.Update(category);
             return RedirectToAction("Index");

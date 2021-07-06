@@ -4,14 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
+<br />
 <h2>Kategoriler</h2>
 
 
 
 <br />
 
-<table class="table table-bordered">
+<table class="table table table-striped projects  table-bordered">
     <tr>    
         <th>ID</th>
         <th>Ad</th>
@@ -31,7 +31,7 @@
     <td>@item.CategoryDescription</td>
     <td>@item.CategoryStatus</td>
     <td><a href="/AdminCategory/DeleteCategory/@item.CategoryID" type="button" class="btn btn-danger">Sil</a></td>
-    <td><a href="/AdminCategory/UpdateCategory/@item.CategoryID" type="button" class="btn btn-warning">Güncelle</a></td>
+    <td><a href="/AdminCategory/EditCategory/@item.CategoryID" type="button" class="btn btn-warning">Güncelle</a></td>
     <td><a href="/Heading/Index/" type="button" class="btn btn-primary">Başlıklar</a></td>
 </tr>
     }
