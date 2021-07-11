@@ -31,8 +31,12 @@ namespace MvcProje.Controllers
 
         public PartialViewResult ContactPartial()
         {
-            var contact = _Context.Contacts.Count().ToString();
-            ViewBag.contact = contact;
+            var contacts = _Context.Contacts.Count().ToString();
+            ViewBag.contact = contacts;
+
+            var messages = _Context.Messages.Count(x => x.ReciverMail == "fatih@hotmail.com").ToString();
+            ViewBag.message = messages;
+
             return PartialView();
         }
 

@@ -59,6 +59,7 @@
     <Compile Include="Abstracts\IContactDal.cs" />
     <Compile Include="Abstracts\IContentDal.cs" />
     <Compile Include="Abstracts\IHeadingDal.cs" />
+    <Compile Include="Abstracts\IMessageDal.cs" />
     <Compile Include="Abstracts\IRepository.cs" />
     <Compile Include="Abstracts\IWriterDal.cs" />
     <Compile Include="Class1.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
