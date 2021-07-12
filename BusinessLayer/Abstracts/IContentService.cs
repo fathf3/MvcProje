@@ -9,6 +9,7 @@ namespace BusinessLayer.Abstracts
 {
     public interface IContentService : IService<Content>
     {
+        List<Content> getListByWriter(int id);
         List<Content> getListByHeadingId(int id);
     }
 }

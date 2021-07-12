@@ -45,7 +45,7 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListSendbox()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@hotmail.com");
+            return _messageDal.List(x => x.SenderMail == "fatih@hotmail.com");
         }
 
         public void Update(Message p)

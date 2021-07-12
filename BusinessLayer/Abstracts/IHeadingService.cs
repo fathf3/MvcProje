@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstracts
 {
     public interface IHeadingService : IService<Heading>
     {
-        
+        List<Heading> GetListByWriter();
     }
 }
