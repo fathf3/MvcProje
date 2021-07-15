@@ -38,14 +38,14 @@ namespace BusinessLayer.Concrete
             return _messageDal.List();
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListInbox(string mail)
         {
-            return _messageDal.List(x => x.ReciverMail == "fatih@hotmail.com");
+            return _messageDal.List(x => x.ReciverMail == mail);
         }
 
-        public List<Message> GetListSendbox()
+        public List<Message> GetListSendbox(string mail)
         {
-            return _messageDal.List(x => x.SenderMail == "fatih@hotmail.com");
+            return _messageDal.List(x => x.SenderMail == mail);
         }
 
         public void Update(Message p)

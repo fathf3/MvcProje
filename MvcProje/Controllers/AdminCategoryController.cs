@@ -15,7 +15,7 @@ namespace MvcProje.Controllers
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         
-        [Authorize]
+       
         public ActionResult Index()
         {
             var categoryValues = categoryManager.getList();

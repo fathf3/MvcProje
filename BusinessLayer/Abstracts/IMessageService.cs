@@ -9,8 +9,8 @@ namespace BusinessLayer.Abstracts
 {
     public interface IMessageService : IService<Message>
     {
-        List<Message> GetListInbox();
-        List<Message> GetListSendbox();
+        List<Message> GetListInbox(string mail);
+        List<Message> GetListSendbox(string mail);
 
 
     }

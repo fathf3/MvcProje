@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,9 +11,11 @@ using System.Web.Security;
 
 namespace MvcProje.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
+        WriterLoginManager writerLogin = new WriterLoginManager(new EfWriterDal());
         [HttpGet]
         public ActionResult Index()
         {
@@ -47,9 +51,9 @@ namespace MvcProje.Controllers
         public ActionResult WriterLogin(Writer writer)
         {
 
-            Context context = new Context();
-            var writerUserInfo = context.Writers.FirstOrDefault(x => x.WriterMail == writer.WriterMail &&
-            x.WriterPassword == writer.WriterPassword);
+
+            var writerUserInfo = writerLogin.GetWriter(writer.WriterMail, writer.WriterPassword);
+            
             if (writerUserInfo != null)
             {
                 FormsAuthentication.SetAuthCookie(writerUserInfo.WriterMail, false);
@@ -66,6 +70,12 @@ namespace MvcProje.Controllers
             return View();
         }
 
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Headings", "Default");
+        }
 
     }
 }

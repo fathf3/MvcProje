@@ -2,6 +2,8 @@
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,14 +30,48 @@ namespace MvcProje.Controllers
             var contactValues = contactManager.getByID(id);
             return View(contactValues);
         }
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult NewMessage()
+        {
+
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult NewMessage(Contact contact)
+        {
+            ValidationResult results = validationRules.Validate(contact);
+            if (results.IsValid)
+            {
+                contact.ContactDate = DateTime.Parse(DateTime.Now.ToShortDateString().ToString());
+                contactManager.add(contact);
+                return RedirectToAction("HomePage", "Home");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
+        }
+
 
         public PartialViewResult ContactPartial()
         {
+            string mail = (string)Session["WriterMail"];
+            
+            
             var contacts = _Context.Contacts.Count().ToString();
             ViewBag.contact = contacts;
 
-            var messages = _Context.Messages.Count(x => x.ReciverMail == "fatih@hotmail.com").ToString();
+            var messages = _Context.Messages.Count(x => x.ReciverMail == mail).ToString();
             ViewBag.message = messages;
+
+
 
             return PartialView();
         }

@@ -1,0 +1,215 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mvc Proje</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="~/AdminLTE-3.0.4/home-page/assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/AdminLTE-3.0.4/home-page/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">Mvc Proje</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servisler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Mvc Proje</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 mb-5">Mvc Proje - Fatih Mutlu</p>
+                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="page-section bg-primary" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">We've got what you need!</h2>
+                    <hr class="divider divider-light" />
+                    <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                    <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Projede Yaptıklarım</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fs-1 fa fa-database"></i></div>
+                        <h3 class="h4 mb-2">SQL</h3>
+                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fs-1 fa fa-palette"></i></div>
+                        <h3 class="h4 mb-2">Tasarım Araçları</h3>
+                        <p class="text-muted mb-0">Projenin front-end tarafında JavaScript, Jquery, Html5, Css3, Bootstrap bileşenlerini kullanrak kullanıcı dostu bir tasarım oluşturduk</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fs-1 fa fa-code"></i></div>
+                        <h3 class="h4 mb-2">C# - Asp.Net</h3>
+                        <p class="text-muted mb-0">Bu projeyi C# ile Asp.Net mimarisini kullanarak SOLID e uygun bir şekilde geliştirdik</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio-->
+
+    <div id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="~/AdminLTE-3.0.4/Images/giris_ekrani.jpeg" title="Yazar Giriş Ekranı">
+                        <img class="img-fluid" src="~/AdminLTE-3.0.4/Images/giris_ekrani.jpeg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Giriş Ekranı</div>
+                            <div class="project-name">Yazar Giriş Ekranı</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="~/AdminLTE-3.0.4/Images/baslik_alani.jpeg" title="Başlıklar Sayfası">
+                        <img class="img-fluid" src="~/AdminLTE-3.0.4/Images/baslik_alani.jpeg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Başlıklar</div>
+                            <div class="project-name">Toplam : @ViewBag.headingCount</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="~/AdminLTE-3.0.4/Images/kategori.jpeg" title="Kategori Sayfası">
+                        <img class="img-fluid" src="~/AdminLTE-3.0.4/Images/kategori.jpeg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Kategori Sayfası</div>
+                            <div class="project-name">Toplam : @ViewBag.categoryCount</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="~/AdminLTE-3.0.4/Images/mesaj_alani.jpeg" title="Mesaj Sayafası">
+                        <img class="img-fluid" src="~/AdminLTE-3.0.4/Images/mesaj_alani.jpeg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Mesaj Sayfası</div>
+                            <div class="project-name">Toplam : @ViewBag.messageCount</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="~/AdminLTE-3.0.4/Images/user.jpeg" title="Yazarlar Sayfası">
+                        <img class="img-fluid" src="~/AdminLTE-3.0.4/Images/user.jpeg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Yazar</div>
+                            <div class="project-name">Toplam : @ViewBag.writerCount</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Call to action-->
+    @* <section class="page-section bg-dark text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+            </div>
+        </section>*@
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Bizimle Tanışmak İstermisin !</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Bir sonraki projenize bizimle başlamaya hazır mısınız? Bize bir mesaj gönderin, en kısa sürede size geri döneceğiz!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    
+                    @using (Html.BeginForm("NewMessage", "Contact", FormMethod.Post))
+                    {
+                    <div class="form-group">
+                        @Html.Label("Ad ")
+                        @Html.TextAreaFor(x => x.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.UserName)
+                        <br />
+                        @Html.Label("Konu")
+                        @Html.TextAreaFor(x => x.Subject, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Subject)
+                        <br />
+                        @Html.Label("Mail")
+                        @Html.TextAreaFor(x => x.UserMail, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.UserMail)
+                        <br />
+                        @Html.Label("Mesaj")
+                        @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Message)
+                        <br />
+                        <button class="btn btn-success">Kaydet</button>
+                    </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Fatih Mutlu</div></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/AdminLTE-3.0.4/home-page/js/scripts.js"></script>
+   
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

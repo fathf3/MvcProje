@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -15,16 +16,22 @@ namespace MvcProje.Controllers
     {
         MessageManager messageManager = new MessageManager(new EfMessageDal());
         MessageValidator validations = new MessageValidator();
+        Context context = new Context();
         // GET: WriterPanelMessage
         public ActionResult Inbox()
         {
-            var messageList = messageManager.GetListInbox();
+            string mail = (string)Session["WriterMail"];
+            
+            var messageList = messageManager.GetListInbox(mail);
             return View(messageList);
         }
 
         public ActionResult Sendbox()
         {
-            var messageList = messageManager.GetListSendbox();
+            string mail = (string)Session["WriterMail"];
+            int messageCount = messageManager.GetListSendbox(mail).Count();
+            ViewBag.messageCount = messageCount;
+            var messageList = messageManager.GetListSendbox(mail);
             return View(messageList);
         }
 
@@ -50,9 +57,11 @@ namespace MvcProje.Controllers
         public ActionResult NewMessage(Message message)
         {
             ValidationResult results = validations.Validate(message);
+            string mail = (string)Session["WriterMail"];
             if (results.IsValid)
             {
-                message.SenderMail = "fatih@hotmail.com";
+                
+                message.SenderMail = mail;
                 message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString().ToString());
                 messageManager.add(message);
                 return RedirectToAction("Sendbox");
@@ -72,6 +81,10 @@ namespace MvcProje.Controllers
 
         public PartialViewResult MessageListMenu()
         {
+            string mail = (string)Session["WriterMail"];
+            int inboxMessageCount = messageManager.GetListInbox(mail).Count();
+            ViewBag.inboxMessageCount = inboxMessageCount;
+
             return PartialView();
         }
 
